@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>University Login (Demo)</title>
+  <style>
+    :root{
+      --navy:#144569;
+      --accent:#dab457;
+      --ink:#1f2937;
+      --muted:#6b7280;
+      --surface:#ffffff;
+      --panel:#f6f7f9;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--panel);
+    }
+    /* Header */
+    .bar{
+      background:var(--navy);
+      color:#fff;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    /* Main container */
+    .wrap{max-width:960px;margin:18px auto;padding:0 16px}
+    .grid{
+      display:grid;
+      gap:20px;
+      grid-template-columns:320px 1fr;
+    }
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr}
+    }
+    .panel{
+      background:var(--surface);
+      border-radius:8px;
+      padding:16px;
+      box-shadow:0 2px 14px rgba(0,0,0,.08);
+      border:1px solid #e5e7eb;
+    }
+
+    /* Login card */
+    h2{font-size:16px;margin:0 0 10px 0}
+    label{display:block;font-size:13px;color:var(--muted);margin:8px 0 6px}
+    input{
+      width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:14px
+    }
+    .btn{
+      margin-top:12px;
+      background:var(--navy);color:#fff;border:0;border-radius:6px;
+      height:38px;display:inline-grid;place-items:center;width:110px;cursor:pointer
+    }
+    .alert{
+      background:#f9f1d0;border-left:6px solid var(--accent);
+      padding:12px;border-radius:6px;color:#4b5563
+    }
+    .links{margin-top:14px}
+    .links a{display:block;color:#1d4ed8;text-decoration:none;margin:6px 0;font-size:14px}
+    .links a:hover{text-decoration:underline}
+    /* Footer */
+    footer{
+      margin-top:26px;padding:14px 18px;background:#d5d9df;color:#111827;font-size:13px
+    }
+    footer .foot{max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px}
+    footer a{color:#0f2d46;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="bar">University Login Service (Demo — Non‑SSO)</div>
+
+  <div class="wrap">
+    <div class="grid">
+      <div class="panel">
+        <h2>Enter your account and password</h2>
+        <label>Account</label>
+        <input type="text" placeholder="username" />
+        <label>Password</label>
+        <input type="password" placeholder="password" />
+        <button class="btn" type="button">Login</button>
+      </div>
+
+      <div class="panel">
+        <div class="alert">
+          <strong>Attention:</strong> When you are finished using your authenticated applications,
+          log out and close your browser. Do not leave sessions open on shared devices.
+          <br><br>
+          <strong>Terms of Use:</strong> This system is for authorized use only. By continuing, you agree
+          to institutional policies and consent to appropriate monitoring.
+        </div>
+        <div class="links">
+          <a href="#">I don't know my account</a>
+          <a href="#">I don't know my password</a>
+          <a href="#">I can't access two‑factor authentication</a>
+          <a href="#">My correct username and password aren't working</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="foot">
+      <span>© 2025 Example University</span> |
+      <a href="#">Emergency information</a> |
+      <a href="#">Legal & privacy</a> |
+      <a href="#">Accessibility</a> |
+      <a href="#">Accountability</a> |
+      <a href="#">Employment</a>
+    </div>
+  </footer>
+</body>
+</html>

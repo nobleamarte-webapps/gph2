@@ -3,150 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OMS TA Application — Welcome (Replica)</title>
-  <style>
-    /* --- Basic reset --- */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, "Helvetica Neue", sans-serif;
-      background:#001b30; /* GT navy */
-      color:#2a2a2a;
-      line-height:1.5;
-    }
-
-    /* --- Wrapper --- */
-    .page{
-      max-width: 760px;
-      margin: 56px auto;
-      padding: 0 16px;
-    }
-    .card{
-      background:#fff;
-      border-radius:10px;
-      padding:24px;
-      box-shadow: 0 10px 32px rgba(0,0,0,.20);
-    }
-
-    /* --- Header / mark (simple placeholder so no trademarked asset needed) --- */
-    .mast{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:18px;
-    }
-    .mark{
-      width:76px;height:52px;
-      background:#0a487a;
-      border-radius:8px;
-      display:grid;place-items:center;
-      color:#fff;font-weight:800;letter-spacing:.5px;
-    }
-    .wordmark{
-      font-size:34px;
-      color:#ffffff;
-      font-weight:800;
-      letter-spacing:.5px;
-    }
-    /* put the wordmark above card */
-    .mast-wrap{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-    .mast-wrap .wordmark{margin:0}
-
-    /* --- Content --- */
-    h1{
-      font-size:20px;
-      margin:0 0 14px 0;
-      color:#333;
-      font-weight:700;
-    }
-    .hl{
-      background:#ffe48e; /* gold highlight */
-      font-weight:700;
-      padding:8px 10px;
-      border-radius:4px;
-      display:block;
-      margin:12px 0;
-    }
-    ul{margin:12px 0 4px 20px;padding:0}
-    li{margin:6px 0}
-    .sub{
-      background:#ffe48e;
-      display:inline-block;
-      padding:3px 6px;
-      border-radius:4px;
-      font-weight:700;
-      margin-top:12px;
-    }
-    .note{
-      font-style:italic;
-      color:#5b5b5b;
-      margin-top:10px;
-    }
-
-    /* --- Arrow button --- */
-    .actions{
-      display:flex;
-      justify-content:flex-end;
-      margin-top:18px;
-    }
-    .next{
-      display:inline-grid;
-      place-items:center;
-      width:46px;height:38px;
-      border-radius:8px;
-      background:#003057;
-      color:#fff;
-      text-decoration:none;
-      font-size:20px;
-      box-shadow: 0 2px 0 rgba(0,0,0,.18) inset;
-    }
-    .next:focus{outline:2px solid #ffe48e; outline-offset:3px}
-
-    /* --- Responsive --- */
-    @media (max-width:520px){
-      .page{margin:28px auto}
-    }
-  </style>
+  <title>OMS TA Application </title>
+  <link rel="icon" href="icon.png" type="image/png" />
+ 
 </head>
 <body>
+  <header class="brand-header-container">
+    <img class="brand-image-logo" src="icon.png" alt="Georgia Tech" />
+  </header>
 
-  <div class="page">
-    <!-- Faux wordmark row (optional; remove if you will use an official logo image) -->
-    <div class="mast-wrap" aria-hidden="true">
-      <div class="mark">GT</div>
-      <div class="wordmark">Georgia Tech</div>
-    </div>
+  <div class="form-outer-wrapper">
+    <div class="form-content-card-panel">
+      <form action="#" method="post">
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="first">
+            First name:
+            <small class="form-field-help-caption">(This should be your legal first name, as it appears on official identification documents)</small>
+          </label>
+          <input class="form-input-control" id="first" name="first_name" type="text" />
+        </div>
 
-    <div class="card">
-      <h1>Welcome to the Spring 2026 OMS TA Application!</h1>
+        <hr class="form-section-divider" />
 
-      <span class="hl">
-        Note: Throughout this application, the term “TA” encompasses GTAs, Graders,
-        Instructional Associates, and anyone else working in a teaching assistant capacity for an OMS course.
-      </span>
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="pref">Preferred first name (if different from above):</label>
+          <input class="form-input-control" id="pref" name="preferred_first_name" type="text" />
+        </div>
 
-      <p>You <strong>must</strong> fill out this application if <strong>any</strong> of these apply to you:</p>
-      <ul>
-        <li>You are currently an OMS TA in the <strong>Fall 2025</strong> semester, OR</li>
-        <li>You would like to be an OMS TA during the <strong>Spring 2026</strong> semester.</li>
-      </ul>
+        <hr class="form-section-divider" />
 
-      <span class="sub">Application Deadlines:</span>
-      <ul>
-        <li>If you will be an <u>alum</u> in <strong>Spring 2026</strong>: Monday, September 8</li>
-        <li>If you will <u>not</u> be an alum in <strong>Spring 2026</strong>: Monday, September 22</li>
-      </ul>
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="middle">
+            Middle name(s):
+            <small class="form-field-help-caption">(This should be your legal middle name(s), as shown on official identification documents)</small>
+          </label>
+          <input class="form-input-control" id="middle" name="middle_names" type="text" />
+        </div>
 
-      <p class="note">
-        Note: Filling out this application does <u>not</u> guarantee you a TA position.
-      </p>
+        <hr class="form-section-divider" />
 
-      <div class="actions">
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="last">
+            Last name:
+            <small class="form-field-help-caption">(This should be your legal last name, as it appears on official identification documents)</small>
+          </label>
+          <input class="form-input-control" id="last" name="last_name" type="text" />
+        </div>
+
+        <hr class="form-section-divider" />
+
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="gt_email">Georgia Tech email address:</label>
+          <input class="form-input-control" id="gt_email" name="gt_email" type="email" />
+        </div>
+
+        <hr class="form-section-divider" />
+
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="alt_email">
+            Alternate, non-Georgia Tech email address (optional):
+            <small class="form-field-help-caption">(Although this is optional, we strongly encourage you to provide an alternate email address.)</small>
+          </label>
+          <input class="form-input-control" id="alt_email" name="alt_email" type="email" />
+        </div>
+
+        <hr class="form-section-divider" />
+
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="phone">
+            Phone number:
+            <small class="form-field-help-caption">Note: we will not contact you at this number. If you are selected to be a TA, this is part of the required information we have to gather from you, and gathering it now simplifies the hiring process.</small>
+          </label>
+          <input class="form-input-control" id="phone" name="phone" type="tel" />
+        </div>
+
+        <hr class="form-section-divider" />
+
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="gt_username">Georgia Tech username (e.g. djoyner3, daj3, gth815k):</label>
+          <input class="form-input-control" id="gt_username" name="gt_username" type="text" />
+        </div>
+
+        <hr class="form-section-divider" />
+
+        <div class="form-field-group">
+          <label class="form-field-label-text" for="gtid">
+            9-digit GTID that begins with "90" (e.g. 903456789):
+            <small class="form-field-help-caption">
+              If needed you can look up your GTID here:
+              <a class="form-help-link-inline" href="https://registrar.gatech.edu/info/gtid-lookup" target="_blank" rel="noopener">https://registrar.gatech.edu/info/gtid-lookup</a>.
+            </small>
+          </label>
+          <input class="form-input-control" id="gtid" name="gtid" type="text" inputmode="numeric" pattern="\d{9}" maxlength="9" />
+        </div>
+
+                <div class="actions">
   <a href="/gph2/simulated-login.html" class="next" aria-label="Next">→</a>
 </div>
-
+      </form>
     </div>
   </div>
 
+   <style>
+    *{ box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+      background: rgb(1, 37, 64);
+      color: black;
+    }
+    .brand-header-container {
+      max-width: 560px;
+      margin: 22px auto 6px;
+      display: flex;
+      align-items: center;
+  
+    }
+    .brand-image-logo { height: 48px; width: auto; display: block; }
+    .form-outer-wrapper { max-width: 580px; margin: 0 auto 28px; padding: 0 15px; }
+    .form-content-card-panel {
+      background: white;
+      border: 1px solid gainsboro;
+      border-radius: 4px;
+      padding: 12px;
+    }
+    .form-field-group { margin: 8px 0; }
+    .form-field-label-text { display: block; font-size: 12px; margin-bottom: 4px; }
+    .form-field-help-caption { display: block; color: dimgray; font-style: italic; font-size: 11px; margin-top: 2px; }
+    .form-input-control {
+      width: 100%;
+      height: 30px;
+      border: 1px solid rgb(241, 239, 239);
+      border-radius: 3px;
+      padding: 4px 8px;
+      font-size: 13px;
+      background: white;
+    }
+    .form-input-control:focus {
+      outline: none;
+    box-shadow: 0 0 0 2px lightblue;
+    }
+    .form-section-divider { border: 0; border-top: 1px solid rgb(231, 230, 230); margin: 10px 0; }
+    .form-help-link-inline { color: rgb(28, 120, 211); text-decoration: underline; }
+    .form-navigation-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+    .form-navigation-button {
+      display: inline-grid;
+      place-items: center;
+      width: 40px;
+      height: 30px;
+      background:rgb(1, 37, 64);
+      color: white;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+  </style>
 </body>
 </html>
